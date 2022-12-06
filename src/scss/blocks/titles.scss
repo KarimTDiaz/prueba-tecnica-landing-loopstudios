@@ -1,0 +1,59 @@
+@use '../mixins/responsive.scss' as*;
+
+.main-title,
+.title,
+.title--small{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main-title{
+    text-align: left;
+    margin-bottom: 15rem;
+    padding: 1.5rem;
+    font-weight: 100;
+    font-size: 3rem;
+    border:2px solid var(--white);
+    color: var(--white);
+    @include responsive(laptop){
+        margin-left: 80px;
+        margin-bottom: 5rem;
+        width: 600px;
+    }
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 200;
+    margin: 1rem 0 0.7rem;
+    &--small{
+        width: 45%;
+        padding: 2rem 1rem;
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: 100;
+        text-align: left;
+        
+        &-grid{
+            width: 35%;
+        }
+        @include responsive(laptop){
+            padding: 23rem 1rem;
+            width: 65%;
+            &-grid{
+                width: 40%;
+            }
+        }
+    }
+    
+}
+
+.text{
+    padding: 0 2rem;
+    margin: 0;
+    font-family:'Alata', sans-serif;
+    line-height: 2rem;
+    color: var(--very-dark-gray);
+    @include responsive(laptop){
+        padding: 0;
+    }
+}

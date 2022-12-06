@@ -1,0 +1,25 @@
+@use '../mixins/responsive.scss' as*;
+
+.interactive{
+    padding: 6rem 1.5rem 3rem;
+    position: relative;
+    &__data{
+        padding: 2rem 0.5rem ;
+    }
+    @include responsive(laptop){
+        
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3rem;
+        &__data{
+            position: absolute;
+            left: 34rem;
+            top:14rem;
+            background-color: var(--white);
+            width: 39rem;
+            padding: 5rem;
+            text-align: left;
+        }
+    }
+}

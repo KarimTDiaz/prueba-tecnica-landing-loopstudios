@@ -1,0 +1,47 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../functions/image.scss' as*;
+
+.menu{
+    display: none;
+
+    &__item{
+        margin-bottom: 2rem;
+    }
+    &__link{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2rem;
+        font-weight: 100;
+        color: var(--white);
+        text-transform: uppercase;
+    }
+    &--show{
+    @include flexbox(flex,column,nowrap,start,start);
+    position: absolute;
+    left: 0;
+    top:10rem;
+    width: 100%;
+    height: 500px;
+    padding: 5rem 2rem 0;
+    background-color: var(--black);
+    }
+    @include responsive(laptop){
+        @include flexbox(flex,row,nowrap,space-between,center);
+        &__item{
+            margin-left: 2rem;
+        }
+        &__link{
+                font-family: 'Alata', sans-serif;
+                font-size: 1rem;
+                color: var(--white);
+                text-transform: none;
+        }
+    }
+}
+
+.icon-hamburger{
+    @include responsive(laptop){
+        display: none;
+    }
+}

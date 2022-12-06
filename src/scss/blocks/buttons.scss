@@ -1,0 +1,19 @@
+@use '../mixins/responsive.scss' as*;
+
+.button{
+    width: 250px;
+    color: var(--black-text);
+    font-family:'Alata', sans-serif; 
+    letter-spacing: 0.5rem;
+    font-weight: 700;
+    margin: 0;
+    border: 2px solid var(--black);
+    padding: 0.5rem 3rem;
+    position: absolute;
+    top: 84rem;
+    left: 7rem;
+    @include responsive(laptop){
+        top: 1rem;
+        left: 55.5rem;
+    }
+}

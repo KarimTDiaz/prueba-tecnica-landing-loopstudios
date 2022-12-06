@@ -1,0 +1,32 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../functions/image.scss' as*;
+
+.header{
+    padding: 2.5rem 1.5rem;
+    background-image:url(../assets/images/mobile/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &--black{
+        background-image: none;
+        background-color: black;
+    }
+
+    &__top{
+        @include flexbox(flex,row,nowrap,space-between,center);
+        height:3rem;
+        margin-bottom: 12rem;
+    }
+  @include responsive(laptop){
+    background-image:url(../assets/images/desktop/image-hero.jpg);
+
+    &__top{
+        max-width: 1220px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6rem;
+    }
+  }
+
+}
