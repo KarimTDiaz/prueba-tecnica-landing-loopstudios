@@ -1,0 +1,17 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+
+.socials{
+    @include flexbox(flex,row,nowrap,center,center);
+    gap: 1rem;
+
+    &__icon{
+        font-size: 1.5rem;
+        color: var(--white);
+    }
+    @include responsive (laptop){
+        @include flexbox(flex,row,nowrap,end,center);
+        margin-bottom: 0.8rem;
+
+    }
+}

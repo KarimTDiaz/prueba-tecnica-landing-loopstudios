@@ -495,7 +495,32 @@ body {
   }
 }
 
-/* ESTILOS DEL FOOTER */
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem;
+  background-color: var(--black);
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo--footer {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .logo--footer {
+    margin-bottom: 2rem;
+  }
+}
+
 .interactive {
   padding: 6rem 1.5rem 3rem;
   position: relative;
@@ -655,6 +680,12 @@ body {
   color: var(--white);
   text-transform: uppercase;
 }
+.menu__link--footer {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--white);
+}
 .menu--show {
   display: flex;
   flex-flow: column nowrap;
@@ -668,6 +699,13 @@ body {
   padding: 5rem 2rem 0;
   background-color: var(--black);
 }
+.menu--footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 @media screen and (min-width: 1024px) {
   .menu {
     display: flex;
@@ -678,16 +716,44 @@ body {
   .menu__item {
     margin-left: 2rem;
   }
+  .menu__item--footer {
+    margin-left: 0;
+  }
   .menu__link {
     font-family: "Alata", sans-serif;
     font-size: 1rem;
     color: var(--white);
     text-transform: none;
   }
+  .menu--footer {
+    margin-bottom: 0;
+    width: 500px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .icon-hamburger {
     display: none;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.socials__icon {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+@media screen and (min-width: 1024px) {
+  .socials {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 0.8rem;
   }
 }

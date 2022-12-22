@@ -15,6 +15,12 @@
         font-weight: 100;
         color: var(--white);
         text-transform: uppercase;
+        &--footer{
+            text-transform:capitalize;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--white);
+        }
     }
     &--show{
     @include flexbox(flex,column,nowrap,start,start);
@@ -26,16 +32,27 @@
     padding: 5rem 2rem 0;
     background-color: var(--black);
     }
+    &--footer{
+        @include flexbox(flex,column,nowrap,center,center);
+        margin-bottom: 2rem;
+    }
     @include responsive(laptop){
         @include flexbox(flex,row,nowrap,space-between,center);
         &__item{
             margin-left: 2rem;
+            &--footer{
+                margin-left: 0;
+            }
         }
         &__link{
                 font-family: 'Alata', sans-serif;
                 font-size: 1rem;
                 color: var(--white);
                 text-transform: none;
+        }
+        &--footer{
+            margin-bottom: 0;
+            width: 500px;
         }
     }
 }

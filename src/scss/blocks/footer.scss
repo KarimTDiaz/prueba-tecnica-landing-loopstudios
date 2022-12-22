@@ -1,1 +1,14 @@
-/* ESTILOS DEL FOOTER */
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+
+.footer{
+    @include flexbox(flex,column,nowrap,center,center);
+    padding: 3.5rem;
+    background-color: var(--black);
+
+    @include responsive(laptop){
+        @include flexbox(flex,row,nowrap,space-between,center);
+        
+
+    }
+}
