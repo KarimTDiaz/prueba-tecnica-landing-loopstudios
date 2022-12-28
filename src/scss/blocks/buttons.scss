@@ -10,8 +10,8 @@
     border: 2px solid var(--black);
     padding: 0.5rem 3rem;
     position: absolute;
-    top: 84rem;
-    left: 7rem;
+    top: 100%;
+    right: 16%;
     @include responsive(laptop){
         top: 1rem;
         left: 55.5rem;
